@@ -1,0 +1,5 @@
+WindowsFormsApplication2/bin/*
+WindowsFormsApplication2/obj/*
+packages/*
+WindowsFormsApplication2/Properties/DataSources/*
+.vs/*
