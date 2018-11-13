@@ -42,7 +42,7 @@ namespace WindowsFormsApplication2
         private const string CLIMB = "Climb of the spiral:";
         private const string INNER_DIAMETER = "Inner diameter:";
         private const string OUTER_DIAMETER = "Outer diameter:";
-        private const string STRUCTURE_WIDTH = "Structure width:";
+        private const string SPACE_WIDTH = "Space width:";
 
         enum Axes { xUp, xDown, xFront, xBack, yUp, yDown, yFront, yBack, zUp, zDown, zFront, zBack }
 
@@ -97,17 +97,18 @@ namespace WindowsFormsApplication2
             if (areParametersPhysical)
             {
                 double wallWidth = Convert.ToDouble(textBoxWidthWall.Text, CultureInfo.InvariantCulture);
-                double structureWidth = Convert.ToDouble(textBoxWidthStructure.Text, CultureInfo.InvariantCulture);
+                double spaceWidth = Convert.ToDouble(textBoxWidthStructure.Text, CultureInfo.InvariantCulture);
                 double depth = Convert.ToDouble(textBoxLength.Text, CultureInfo.InvariantCulture);
                 double innerSize = Convert.ToDouble(textBoxInnerDiameter.Text, CultureInfo.InvariantCulture);
                 double outerSize = Convert.ToDouble(textBoxOuterDiameter.Text, CultureInfo.InvariantCulture);             
-                if (!(Validator.ValidNumber(wallWidth) && Validator.ValidNumber(structureWidth) && Validator.ValidNumber(depth) && Validator.ValidNumber(innerSize) && Validator.ValidNumber(outerSize)))
+                if (!(Validator.ValidNumber(wallWidth) && Validator.ValidNumber(spaceWidth) && Validator.ValidNumber(depth) && Validator.ValidNumber(innerSize) && Validator.ValidNumber(outerSize)))
                 {
                     return null;
                 }
-                double climb = ConvertorOfParametres.CountClimb(innerSize, outerSize, structureWidth, wallWidth);
+                
+                double climb = ConvertorOfParametres.CountClimb(spaceWidth, wallWidth);
                 double move = ConvertorOfParametres.CountMove(innerSize, wallWidth, climb);
-                double turns = ConvertorOfParametres.CountTurns(climb, structureWidth, wallWidth);
+                double turns = ConvertorOfParametres.CountTurns(climb, wallWidth, outerSize, move);
                 double circ = ConvertorOfParametres.CountCircumference(move, climb, turns);
                 return new SpiralParameters(move, climb, depth, circ, wallWidth);
             }
@@ -433,7 +434,7 @@ namespace WindowsFormsApplication2
             labelOuterDiameter.Text = OUTER_DIAMETER;
             labelLength.Text = STRUCTURE_LENGTH;
             labelWidthWall.Text = WALL_WIDTH;
-            labelWidthSpace.Text = STRUCTURE_WIDTH;
+            labelWidthSpace.Text = SPACE_WIDTH;
             if (radioButtonMult.Checked)
             {
                 label11.Text = MULTIPLES;
@@ -829,6 +830,7 @@ namespace WindowsFormsApplication2
             textBoxInfo.ForeColor = Color.Black;
             if (atom2 != null)
             {
+
                 double distance = Math.Sqrt(Math.Pow(atom2.x - atom1.x, 2) + Math.Pow(atom2.y - atom1.y, 2) + Math.Pow(atom2.z - atom1.z, 2));
                 textBoxInfo.Text = String.Format("{0}: {1}  {2} {3} | {4}: {5} {6} {7} | distance: {8}",atom1.element, Math.Round(atom1.x, places), Math.Round(atom1.y, places), Math.Round(atom1.z, places), atom2.element, Math.Round(atom2.x, places), Math.Round(atom2.y, places), Math.Round(atom2.z, places), Math.Round(distance, places));
 

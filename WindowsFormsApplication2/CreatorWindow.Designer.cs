@@ -86,6 +86,12 @@
             this.radioButtonAngstroms = new System.Windows.Forms.RadioButton();
             this.panelUnits = new System.Windows.Forms.Panel();
             this.panelAxes = new System.Windows.Forms.Panel();
+            this.radioButtonZBack = new System.Windows.Forms.RadioButton();
+            this.radioButtonZFront = new System.Windows.Forms.RadioButton();
+            this.radioButtonYBack = new System.Windows.Forms.RadioButton();
+            this.radioButtonYFront = new System.Windows.Forms.RadioButton();
+            this.radioButtonXBack = new System.Windows.Forms.RadioButton();
+            this.radioButtonXFront = new System.Windows.Forms.RadioButton();
             this.radioButtonZDown = new System.Windows.Forms.RadioButton();
             this.radioButtonYDown = new System.Windows.Forms.RadioButton();
             this.radioButtonXDown = new System.Windows.Forms.RadioButton();
@@ -105,12 +111,6 @@
             this.textBoxInfo = new System.Windows.Forms.TextBox();
             this.checkBoxViewMode = new System.Windows.Forms.CheckBox();
             this.buttonLoadView = new System.Windows.Forms.Button();
-            this.radioButtonXFront = new System.Windows.Forms.RadioButton();
-            this.radioButtonXBack = new System.Windows.Forms.RadioButton();
-            this.radioButtonYFront = new System.Windows.Forms.RadioButton();
-            this.radioButtonYBack = new System.Windows.Forms.RadioButton();
-            this.radioButtonZFront = new System.Windows.Forms.RadioButton();
-            this.radioButtonZBack = new System.Windows.Forms.RadioButton();
             this.panelUnits.SuspendLayout();
             this.panelAxes.SuspendLayout();
             this.panelCrystal.SuspendLayout();
@@ -308,9 +308,9 @@
             this.labelWidthSpace.Location = new System.Drawing.Point(6, 169);
             this.labelWidthSpace.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWidthSpace.Name = "labelWidthSpace";
-            this.labelWidthSpace.Size = new System.Drawing.Size(147, 25);
+            this.labelWidthSpace.Size = new System.Drawing.Size(180, 25);
             this.labelWidthSpace.TabIndex = 17;
-            this.labelWidthSpace.Text = "Structure width:";
+            this.labelWidthSpace.Text = "Width of the space:";
             // 
             // textBoxWidthWall
             // 
@@ -783,6 +783,78 @@
             this.panelAxes.Size = new System.Drawing.Size(347, 104);
             this.panelAxes.TabIndex = 78;
             // 
+            // radioButtonZBack
+            // 
+            this.radioButtonZBack.AutoSize = true;
+            this.radioButtonZBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonZBack.Location = new System.Drawing.Point(254, 74);
+            this.radioButtonZBack.Name = "radioButtonZBack";
+            this.radioButtonZBack.Size = new System.Drawing.Size(74, 21);
+            this.radioButtonZBack.TabIndex = 97;
+            this.radioButtonZBack.TabStop = true;
+            this.radioButtonZBack.Text = "z back";
+            this.radioButtonZBack.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonZFront
+            // 
+            this.radioButtonZFront.AutoSize = true;
+            this.radioButtonZFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonZFront.Location = new System.Drawing.Point(163, 74);
+            this.radioButtonZFront.Name = "radioButtonZFront";
+            this.radioButtonZFront.Size = new System.Drawing.Size(73, 21);
+            this.radioButtonZFront.TabIndex = 96;
+            this.radioButtonZFront.TabStop = true;
+            this.radioButtonZFront.Text = "z front";
+            this.radioButtonZFront.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYBack
+            // 
+            this.radioButtonYBack.AutoSize = true;
+            this.radioButtonYBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonYBack.Location = new System.Drawing.Point(254, 47);
+            this.radioButtonYBack.Name = "radioButtonYBack";
+            this.radioButtonYBack.Size = new System.Drawing.Size(74, 21);
+            this.radioButtonYBack.TabIndex = 95;
+            this.radioButtonYBack.TabStop = true;
+            this.radioButtonYBack.Text = "y back";
+            this.radioButtonYBack.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonYFront
+            // 
+            this.radioButtonYFront.AutoSize = true;
+            this.radioButtonYFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonYFront.Location = new System.Drawing.Point(163, 47);
+            this.radioButtonYFront.Name = "radioButtonYFront";
+            this.radioButtonYFront.Size = new System.Drawing.Size(73, 21);
+            this.radioButtonYFront.TabIndex = 94;
+            this.radioButtonYFront.TabStop = true;
+            this.radioButtonYFront.Text = "y front";
+            this.radioButtonYFront.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonXBack
+            // 
+            this.radioButtonXBack.AutoSize = true;
+            this.radioButtonXBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonXBack.Location = new System.Drawing.Point(254, 20);
+            this.radioButtonXBack.Name = "radioButtonXBack";
+            this.radioButtonXBack.Size = new System.Drawing.Size(73, 21);
+            this.radioButtonXBack.TabIndex = 93;
+            this.radioButtonXBack.TabStop = true;
+            this.radioButtonXBack.Text = "x back";
+            this.radioButtonXBack.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonXFront
+            // 
+            this.radioButtonXFront.AutoSize = true;
+            this.radioButtonXFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonXFront.Location = new System.Drawing.Point(164, 20);
+            this.radioButtonXFront.Name = "radioButtonXFront";
+            this.radioButtonXFront.Size = new System.Drawing.Size(72, 21);
+            this.radioButtonXFront.TabIndex = 92;
+            this.radioButtonXFront.TabStop = true;
+            this.radioButtonXFront.Text = "x front";
+            this.radioButtonXFront.UseVisualStyleBackColor = true;
+            // 
             // radioButtonZDown
             // 
             this.radioButtonZDown.AutoSize = true;
@@ -1068,78 +1140,6 @@
             this.buttonLoadView.Text = "Load";
             this.buttonLoadView.UseVisualStyleBackColor = false;
             this.buttonLoadView.Click += new System.EventHandler(this.buttonLoadView_Click);
-            // 
-            // radioButtonXFront
-            // 
-            this.radioButtonXFront.AutoSize = true;
-            this.radioButtonXFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonXFront.Location = new System.Drawing.Point(164, 20);
-            this.radioButtonXFront.Name = "radioButtonXFront";
-            this.radioButtonXFront.Size = new System.Drawing.Size(72, 21);
-            this.radioButtonXFront.TabIndex = 92;
-            this.radioButtonXFront.TabStop = true;
-            this.radioButtonXFront.Text = "x front";
-            this.radioButtonXFront.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonXBack
-            // 
-            this.radioButtonXBack.AutoSize = true;
-            this.radioButtonXBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonXBack.Location = new System.Drawing.Point(254, 20);
-            this.radioButtonXBack.Name = "radioButtonXBack";
-            this.radioButtonXBack.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonXBack.TabIndex = 93;
-            this.radioButtonXBack.TabStop = true;
-            this.radioButtonXBack.Text = "x back";
-            this.radioButtonXBack.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonYFront
-            // 
-            this.radioButtonYFront.AutoSize = true;
-            this.radioButtonYFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonYFront.Location = new System.Drawing.Point(163, 47);
-            this.radioButtonYFront.Name = "radioButtonYFront";
-            this.radioButtonYFront.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonYFront.TabIndex = 94;
-            this.radioButtonYFront.TabStop = true;
-            this.radioButtonYFront.Text = "y front";
-            this.radioButtonYFront.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonYBack
-            // 
-            this.radioButtonYBack.AutoSize = true;
-            this.radioButtonYBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonYBack.Location = new System.Drawing.Point(254, 47);
-            this.radioButtonYBack.Name = "radioButtonYBack";
-            this.radioButtonYBack.Size = new System.Drawing.Size(74, 21);
-            this.radioButtonYBack.TabIndex = 95;
-            this.radioButtonYBack.TabStop = true;
-            this.radioButtonYBack.Text = "y back";
-            this.radioButtonYBack.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonZFront
-            // 
-            this.radioButtonZFront.AutoSize = true;
-            this.radioButtonZFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonZFront.Location = new System.Drawing.Point(163, 74);
-            this.radioButtonZFront.Name = "radioButtonZFront";
-            this.radioButtonZFront.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonZFront.TabIndex = 96;
-            this.radioButtonZFront.TabStop = true;
-            this.radioButtonZFront.Text = "z front";
-            this.radioButtonZFront.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonZBack
-            // 
-            this.radioButtonZBack.AutoSize = true;
-            this.radioButtonZBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonZBack.Location = new System.Drawing.Point(254, 74);
-            this.radioButtonZBack.Name = "radioButtonZBack";
-            this.radioButtonZBack.Size = new System.Drawing.Size(74, 21);
-            this.radioButtonZBack.TabIndex = 97;
-            this.radioButtonZBack.TabStop = true;
-            this.radioButtonZBack.Text = "z back";
-            this.radioButtonZBack.UseVisualStyleBackColor = true;
             // 
             // CreatorWindow
             // 
