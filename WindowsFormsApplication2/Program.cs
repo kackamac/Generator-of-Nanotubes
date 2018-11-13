@@ -669,8 +669,9 @@ namespace WindowsFormsApplication2
         /// count number of turns in spiral
         /// </summary>
         /// <param name="alpha">angle climb of the spiral</param>
-        /// <param name="structureWidth">width of the whole structure wall</param>
+        /// <param name="outerDiameter">outer diameter of spiral structure</param>
         /// <param name="wallWidth">width of the one wall</param>
+        /// <param name="moveFromTheMiddle">move from the middle of the spiral</param>
         /// <returns>number of turns</returns>
         public static double CountTurns(double alpha, double wallWidth, double outerDiameter, double moveFromTheMiddle)
         {
@@ -699,9 +700,7 @@ namespace WindowsFormsApplication2
         /// <summary>
         /// count speed of turning the spiral
         /// </summary>
-        /// <param name="innerSize">inner diamater of the spiral</param>
-        /// <param name="outerSize">outer diamater of the spiral</param>
-        /// <param name="structureWidth">width of the whole structure wall</param>
+        /// <param name="spaceWidth">width of the space between walls</param>
         /// <param name="wallWidth">width of the one wall</param>
         /// <returns>speed of turning the spiral in angles</returns>
         public static double CountClimb(double spaceWidth, double wallWidth)
@@ -1233,6 +1232,7 @@ namespace WindowsFormsApplication2
         /// From crystal parameters recounts vectors of move
         /// </summary>
         /// <param name="cp">parameters of the crystal</param>
+        /// <param name="axis">axis around which is rotated</param>
         public static void SetCrystalParams(CrystalParameters cp, String axis)
         {
             try
@@ -1350,13 +1350,13 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public static void CreateSurfaceHeightY(double heigthY, double wallWidth)
+        public static void CreateSurfaceHeightY(double heigthY, double wallHeight)
         {
             double repeats = heigthY; //repeats are read from the params
             repeat = repeats;
             if (angstroms) //repeats mus be counted from the length
             {
-                repeats = Math.Floor(heigthY / wallWidth);
+                repeats = Math.Floor(heigthY / wallHeight);
             }
 
             int listCount = CreatedStructure.Instance.Count();
@@ -1379,13 +1379,13 @@ namespace WindowsFormsApplication2
                 CreatedStructure.Instance.Add(cc);
             }
         }
-        public static void CreateSurfaceDepthZ(double depthZ, double wallWidth)
+        public static void CreateSurfaceDepthZ(double depthZ, double wallDepth)
         {
             double repeats = depthZ; //repeats are read from the params
             repeat = repeats;
             if (angstroms) //repeats mus be counted from the length
             {
-                repeats = Math.Floor(depthZ / wallWidth);
+                repeats = Math.Floor(depthZ / wallDepth);
             }
 
             int listCount = CreatedStructure.Instance.Count();
@@ -1435,6 +1435,8 @@ namespace WindowsFormsApplication2
         /// <param name="widthX">required width of area</param>
         /// <param name="heightY">required height of area</param>
         /// <param name="depthZ">required depth of area</param>
+        /// /// <param name="cp">parameters of input crystal</param>
+        /// /// <param name="axis">axis around which the crystal is rotated</param>
         public static void CreateSurface(CrystalParameters cp,double widthX, double heightY, double depthZ, string axis)
         {
             List<CartesianCoordinates> tmp = new List<CartesianCoordinates>();
