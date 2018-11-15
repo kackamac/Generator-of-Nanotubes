@@ -1448,8 +1448,8 @@ namespace WindowsFormsApplication2
             {
                 CreateSurfaceWidthX(widthX, cp.a);
             }
-            CreateSurfaceHeightY(heightY, cp.b);
-            CreateSurfaceDepthZ(depthZ, cp.c);
+            CreateSurfaceHeightY(heightY, cp.c);
+            CreateSurfaceDepthZ(depthZ, cp.b);
         }
     }
 
