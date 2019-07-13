@@ -137,7 +137,7 @@ namespace WindowsFormsApplication2
                 double innerSize = Convert.ToDouble(textBoxInnerDiameter.Text, CultureInfo.InvariantCulture);
                 double outerSize = Convert.ToDouble(textBoxOuterDiameter.Text, CultureInfo.InvariantCulture);
                 double circ = ConvertorOfParametres.CircumferenceOfTheCircle(innerSize, outerSize); //count circumference of a circle
-                double height = (outerSize / 2 - innerSize / 2) / 2;
+                double height = (outerSize - innerSize) / 2;
                 return new CylinderParameters(depth, circ, height);
             }
             double circumference = Convert.ToDouble(textBoxInnerDiameter.Text, CultureInfo.InvariantCulture);
@@ -224,7 +224,7 @@ namespace WindowsFormsApplication2
         /// select units which it is counted in
         /// </summary>
         /// <returns></returns>
-        public bool IsCountedInAngstroms()
+        public bool IsComputedInAngstroms()
         {
             return radioButtonAngstroms.Checked;
         }
@@ -253,7 +253,8 @@ namespace WindowsFormsApplication2
                     ShowError("Missing input file with crystal atom's coordinates.");
                     return;
                 }
-                CreatorOfSurface.angstroms = IsCountedInAngstroms();
+                CreatorOfSurface.angstroms = IsComputedInAngstroms();
+
                 //load spiral
                 if (comboBoxForm.Text == SPIRAL)
                 {

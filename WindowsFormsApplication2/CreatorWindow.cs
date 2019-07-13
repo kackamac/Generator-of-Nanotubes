@@ -26,6 +26,7 @@ namespace WindowsFormsApplication2
     {
         //bool to know whitch parameters are we counting in
         public bool areParametersPhysical;
+        public bool multiples;
 
         //original size of glControl - to easier resing
         private int glControlOrigSizeX;

@@ -1165,20 +1165,22 @@ namespace WindowsFormsApplication2
     /// </summary>
     class CreatorOfCylinder
     {
-        static double circumference;
         static double radius;
 
         /// <summary>
         /// Creates cyllinder from area
         /// </summary>
-        public static void CreateCylinder(double circ)
+        /// <param name="circumference">circumference of pipe</param>
+        /// <param name="height">height of structure</param>
+        public static void CreateCylinder(double circumference, double height)
         {
             HashSet<CylindricCoordinates> cylindricCoord = new HashSet<CylindricCoordinates>();
-            OneCrystalSize sMax = CreatedStructure.Instance.FindMaxDistanceAmongAtoms();
-            OneCrystalSize sMin = CreatedStructure.Instance.FindMinDistanceAmongAtoms();
-            circumference = Math.Abs(sMax.x - sMin.x);
-            double halfY = Math.Abs(sMax.y - sMin.y);
-            radius = circumference / (2 * Math.PI) - halfY / 2; //radius of the circle with minimal deformation - axis leads throught the middle
+            //OneCrystalSize sMax = CreatedStructure.Instance.FindMaxDistanceAmongAtoms(); //TODO: az to milan schvali tak tohle smaz!
+            //OneCrystalSize sMin = CreatedStructure.Instance.FindMinDistanceAmongAtoms();
+            //circumference = Math.Abs(sMax.x - sMin.x);
+            double halfY = height / 2;//Math.Abs(sMax.y - sMin.y);
+            //double halfY = Math.Abs(sMax.y - sMin.y);
+             radius = circumference / (2 * Math.PI) - halfY / 2; //radius of the circle with minimal deformation - axis leads throught the middle
             foreach (var item in CreatedStructure.Instance)
             {
                 double r = item.y + radius;
@@ -1318,16 +1320,18 @@ namespace WindowsFormsApplication2
             return s;
         }
 
-        public static double repeat;
+        public static double repeatX;
+        public static double repeatY;
+        public static double repeatZ;
 
         public static void CreateSurfaceWidthX(double widthX, double wallWidth)
         {
             double repeats = widthX; //repeats are read from the params
-            repeat = repeats;
             if (angstroms) //repeats mus be counted from the length
             {
                 repeats = Math.Floor(widthX / wallWidth);
             }
+            repeatX = Math.Round(repeats);
 
             int listCount = CreatedStructure.Instance.Count();
             HashSet<CartesianCoordinates> origAtoms = new HashSet<CartesianCoordinates>();
@@ -1353,11 +1357,11 @@ namespace WindowsFormsApplication2
         public static void CreateSurfaceHeightY(double heigthY, double wallHeight)
         {
             double repeats = heigthY; //repeats are read from the params
-            repeat = repeats;
             if (angstroms) //repeats mus be counted from the length
             {
                 repeats = Math.Floor(heigthY / wallHeight);
             }
+            repeatY = Math.Round(repeats);
 
             int listCount = CreatedStructure.Instance.Count();
             HashSet<CartesianCoordinates> origAtoms = new HashSet<CartesianCoordinates>();
@@ -1381,12 +1385,12 @@ namespace WindowsFormsApplication2
         }
         public static void CreateSurfaceDepthZ(double depthZ, double wallDepth)
         {
-            double repeats = depthZ; //repeats are read from the params
-            repeat = repeats;
+            double repeats = depthZ; //repeats are read from the params           
             if (angstroms) //repeats mus be counted from the length
             {
                 repeats = Math.Floor(depthZ / wallDepth);
             }
+            repeatZ = repeats;
 
             int listCount = CreatedStructure.Instance.Count();
             HashSet<CartesianCoordinates> origAtoms = new HashSet<CartesianCoordinates>();
@@ -1491,8 +1495,9 @@ namespace WindowsFormsApplication2
             CrystalParameters recountedCp = RotatorOfCrystal.RotateCrystalRoundAxis(axis, cp);
             CreatorOfSurface.SetCrystalParams(recountedCp, axis);
             CreatorOfSurface.CreateSurface(recountedCp, pp.circumference, pp.wallWidth, pp.depth, axis);
-            double circ = (CreatorOfSurface.repeat) * recountedCp.a;
-            CreatorOfCylinder.CreateCylinder(circ);
+            double circ = (CreatorOfSurface.repeatX) * recountedCp.a;
+            double height = (CreatorOfSurface.repeatY) * recountedCp.c;
+            CreatorOfCylinder.CreateCylinder(circ, height);
         }
 
 
