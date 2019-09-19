@@ -1035,7 +1035,9 @@ namespace WindowsFormsApplication2
         /// <param name="move">move from the middle</param>
         /// <param name="climb">speed of climb of the spiral</param>
         /// <param name="length">required length of the spiral</param>
-        public static void CreateSpiral(double move, double climb, double length)
+        /// <param name="height">required height of the spiral</param>
+        /// <param name="length">how many times the basic cell should repeat in the spiral</param>
+        public static void CreateSpiral(double move, double climb, double length, double height, int repeats)
         {
             Dictionary<CartesianCoordinates, CartesianCoordinates> crystDict = new Dictionary<CartesianCoordinates, CartesianCoordinates>();
             HashSet<CartesianCoordinates> crystHash = new HashSet<CartesianCoordinates>();
@@ -1043,10 +1045,9 @@ namespace WindowsFormsApplication2
             OneCrystalSize sMin = CreatedStructure.Instance.FindMinDistanceAmongAtoms();
             Queue<CartesianCoordinates> queueCrystal = new Queue<CartesianCoordinates>();
 
-
             double sizeX = CreatorOfSurface.crystalMoveX.x;
             double sizeY = (sMax.y - sMin.y);
-            double dist = sizeY / 2;
+            double dist =  sizeY / 2; //height / 2; //
             double moveX = (0 - sMin.x); //move minimum to x=0  
             double moveY = (0 - sMin.y); //move minimum to y=0  
             double moveZ = (0 - sMin.z); //move minimum to z=0  
@@ -1060,9 +1061,11 @@ namespace WindowsFormsApplication2
                 queueCrystal.Enqueue(crystal);
                 OriginalCrystal.Instance.Add(crystal);
             }
-
+            int numberOfAtomsInStructure = OriginalCrystal.Instance.Count*repeats;
             CreatedStructure.Instance.Clear();
 
+
+            
             double origFi = 0;
             double origR = origFi * climb + move;
             double linStep = sizeX / 1000;
@@ -1076,15 +1079,19 @@ namespace WindowsFormsApplication2
             double minY = origR * Math.Sin(origFi);
             int index = 0;
 
-            while (tmpLength < length)
+            while (tmpLength < length || crystHash.Count()<numberOfAtomsInStructure)
             {
+                if (crystHash.Count() == numberOfAtomsInStructure)
+                {
+                    break;
+                }
                 double lenghtAct = 0;
                 double x = 0;
                 double y = 0;
                 double fi = origFi;
                 int crystalCount = OriginalCrystal.Instance.Count;
-
-                while (Math.Abs(OriginalCrystal.Instance[index].x) < Math.Pow(1, -5)  && Math.Abs(tmpLength) < Math.Pow(1, -5)) //while x=0 add to result
+                double reallySmallConstant = Math.Pow(1, -5);
+                while (Math.Abs(OriginalCrystal.Instance[index].x) < reallySmallConstant && Math.Abs(tmpLength) < reallySmallConstant) //while x=0 add to result
                 {
                     double newX = OriginalCrystal.Instance[index].x + sizeX;
                     CartesianCoordinates crystNew = new CartesianCoordinates(OriginalCrystal.Instance[index].element, newX, OriginalCrystal.Instance[index].y, OriginalCrystal.Instance[index].z);
@@ -1473,11 +1480,19 @@ namespace WindowsFormsApplication2
             CrystalParameters recountedCp = RotatorOfCrystal.RotateCrystalRoundAxis(axis, cp);
             CreatorOfSurface.SetCrystalParams(recountedCp, axis);
             CreatorOfSurface.CreateSurface(recountedCp, 0, sp.wallWidth, sp.depth, axis);
+
+            int repeats = 0; //count how many times the basic cell should repeat in the structure
+
             if (!CreatorOfSurface.angstroms) //repeats must be counted from the length
             {
+                repeats = (int)sp.circumference;
                 sp.circumference = sp.circumference * recountedCp.a;
             }
-            CreatorOfSpiral.CreateSpiral(sp.move, sp.climb, sp.circumference);
+            else
+            {
+                repeats = (int)Math.Round(sp.circumference / recountedCp.a);
+            } 
+            CreatorOfSpiral.CreateSpiral(sp.move, sp.climb, sp.circumference, recountedCp.b, repeats);
 
         }
 
