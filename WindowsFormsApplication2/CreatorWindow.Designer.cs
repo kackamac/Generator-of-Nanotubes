@@ -134,7 +134,7 @@
             this.glControlPlot.Margin = new System.Windows.Forms.Padding(53, 52, 53, 52);
             this.glControlPlot.Name = "glControlPlot";
             this.glControlPlot.Size = new System.Drawing.Size(600, 325);
-            this.glControlPlot.TabIndex = 17;
+            this.glControlPlot.TabIndex = 3;
             this.glControlPlot.VSync = false;
             this.glControlPlot.Load += new System.EventHandler(this.glControl_Load);
             this.glControlPlot.Paint += new System.Windows.Forms.PaintEventHandler(this.glControl_Paint);
@@ -154,7 +154,7 @@
             this.buttonCreate.Margin = new System.Windows.Forms.Padding(6);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(100, 32);
-            this.buttonCreate.TabIndex = 1;
+            this.buttonCreate.TabIndex = 7;
             this.buttonCreate.Text = "Create";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
@@ -168,7 +168,7 @@
             this.labelCrystalParametres.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelCrystalParametres.Name = "labelCrystalParametres";
             this.labelCrystalParametres.Size = new System.Drawing.Size(249, 30);
-            this.labelCrystalParametres.TabIndex = 2;
+            this.labelCrystalParametres.TabIndex = 10;
             this.labelCrystalParametres.Text = "Crystal parametres";
             // 
             // labelInnerDiameter
@@ -180,7 +180,7 @@
             this.labelInnerDiameter.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelInnerDiameter.Name = "labelInnerDiameter";
             this.labelInnerDiameter.Size = new System.Drawing.Size(142, 25);
-            this.labelInnerDiameter.TabIndex = 3;
+            this.labelInnerDiameter.TabIndex = 15;
             this.labelInnerDiameter.Text = "Inner diameter:";
             // 
             // labelLength
@@ -192,7 +192,7 @@
             this.labelLength.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelLength.Name = "labelLength";
             this.labelLength.Size = new System.Drawing.Size(155, 25);
-            this.labelLength.TabIndex = 5;
+            this.labelLength.TabIndex = 17;
             this.labelLength.Text = "Structure length:";
             // 
             // labelGamma
@@ -204,7 +204,7 @@
             this.labelGamma.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelGamma.Name = "labelGamma";
             this.labelGamma.Size = new System.Drawing.Size(87, 25);
-            this.labelGamma.TabIndex = 6;
+            this.labelGamma.TabIndex = 16;
             this.labelGamma.Text = "Gamma:";
             // 
             // textBoxInnerDiameter
@@ -214,7 +214,7 @@
             this.textBoxInnerDiameter.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxInnerDiameter.Name = "textBoxInnerDiameter";
             this.textBoxInnerDiameter.Size = new System.Drawing.Size(98, 30);
-            this.textBoxInnerDiameter.TabIndex = 7;
+            this.textBoxInnerDiameter.TabIndex = 0;
             // 
             // textBoxLength
             // 
@@ -224,7 +224,7 @@
             this.textBoxLength.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxLength.Name = "textBoxLength";
             this.textBoxLength.Size = new System.Drawing.Size(98, 30);
-            this.textBoxLength.TabIndex = 9;
+            this.textBoxLength.TabIndex = 2;
             // 
             // textBoxGamma
             // 
@@ -233,7 +233,7 @@
             this.textBoxGamma.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxGamma.Name = "textBoxGamma";
             this.textBoxGamma.Size = new System.Drawing.Size(78, 30);
-            this.textBoxGamma.TabIndex = 10;
+            this.textBoxGamma.TabIndex = 6;
             // 
             // labelFile
             // 
@@ -244,7 +244,7 @@
             this.labelFile.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelFile.Name = "labelFile";
             this.labelFile.Size = new System.Drawing.Size(163, 25);
-            this.labelFile.TabIndex = 11;
+            this.labelFile.TabIndex = 6;
             this.labelFile.Text = "Choose input file:";
             // 
             // comboBoxParams
@@ -258,7 +258,7 @@
             this.comboBoxParams.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxParams.Name = "comboBoxParams";
             this.comboBoxParams.Size = new System.Drawing.Size(237, 33);
-            this.comboBoxParams.TabIndex = 12;
+            this.comboBoxParams.TabIndex = 2;
             this.comboBoxParams.SelectedValueChanged += new System.EventHandler(this.comboBoxParams_SelectedValueChanged);
             // 
             // labelForm
@@ -270,7 +270,7 @@
             this.labelForm.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelForm.Name = "labelForm";
             this.labelForm.Size = new System.Drawing.Size(270, 25);
-            this.labelForm.TabIndex = 14;
+            this.labelForm.TabIndex = 6;
             this.labelForm.Text = "Choose structure to generate:";
             // 
             // comboBoxForm
@@ -285,7 +285,7 @@
             this.comboBoxForm.Margin = new System.Windows.Forms.Padding(6);
             this.comboBoxForm.Name = "comboBoxForm";
             this.comboBoxForm.Size = new System.Drawing.Size(237, 33);
-            this.comboBoxForm.TabIndex = 15;
+            this.comboBoxForm.TabIndex = 1;
             this.comboBoxForm.SelectedValueChanged += new System.EventHandler(this.comboBoxForm_SelectedValueChanged);
             // 
             // labelWidthWall
@@ -297,7 +297,7 @@
             this.labelWidthWall.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWidthWall.Name = "labelWidthWall";
             this.labelWidthWall.Size = new System.Drawing.Size(160, 25);
-            this.labelWidthWall.TabIndex = 16;
+            this.labelWidthWall.TabIndex = 18;
             this.labelWidthWall.Text = "Width of the wall:";
             // 
             // labelWidthSpace
@@ -309,7 +309,7 @@
             this.labelWidthSpace.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelWidthSpace.Name = "labelWidthSpace";
             this.labelWidthSpace.Size = new System.Drawing.Size(180, 25);
-            this.labelWidthSpace.TabIndex = 17;
+            this.labelWidthSpace.TabIndex = 19;
             this.labelWidthSpace.Text = "Width of the space:";
             // 
             // textBoxWidthWall
@@ -319,7 +319,7 @@
             this.textBoxWidthWall.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxWidthWall.Name = "textBoxWidthWall";
             this.textBoxWidthWall.Size = new System.Drawing.Size(98, 30);
-            this.textBoxWidthWall.TabIndex = 18;
+            this.textBoxWidthWall.TabIndex = 3;
             // 
             // textBoxWidthStructure
             // 
@@ -328,7 +328,7 @@
             this.textBoxWidthStructure.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxWidthStructure.Name = "textBoxWidthStructure";
             this.textBoxWidthStructure.Size = new System.Drawing.Size(98, 30);
-            this.textBoxWidthStructure.TabIndex = 19;
+            this.textBoxWidthStructure.TabIndex = 4;
             // 
             // labelFormParams
             // 
@@ -351,7 +351,7 @@
             this.buttonClear.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(100, 32);
-            this.buttonClear.TabIndex = 23;
+            this.buttonClear.TabIndex = 5;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
@@ -364,7 +364,7 @@
             this.buttonBrowse.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonBrowse.Name = "buttonBrowse";
             this.buttonBrowse.Size = new System.Drawing.Size(100, 32);
-            this.buttonBrowse.TabIndex = 28;
+            this.buttonBrowse.TabIndex = 4;
             this.buttonBrowse.Text = "Browse";
             this.buttonBrowse.UseVisualStyleBackColor = false;
             this.buttonBrowse.Click += new System.EventHandler(this.buttonBrowse_Click);
@@ -382,7 +382,7 @@
             this.labelA.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(74, 25);
-            this.labelA.TabIndex = 32;
+            this.labelA.TabIndex = 12;
             this.labelA.Text = "Side b:";
             // 
             // labelB
@@ -394,7 +394,7 @@
             this.labelB.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelB.Name = "labelB";
             this.labelB.Size = new System.Drawing.Size(74, 25);
-            this.labelB.TabIndex = 33;
+            this.labelB.TabIndex = 11;
             this.labelB.Text = "Side a:";
             // 
             // labelC
@@ -407,7 +407,7 @@
             this.labelC.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelC.Name = "labelC";
             this.labelC.Size = new System.Drawing.Size(73, 25);
-            this.labelC.TabIndex = 34;
+            this.labelC.TabIndex = 13;
             this.labelC.Text = "Side c:";
             // 
             // labelAlpha
@@ -419,7 +419,7 @@
             this.labelAlpha.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelAlpha.Name = "labelAlpha";
             this.labelAlpha.Size = new System.Drawing.Size(69, 25);
-            this.labelAlpha.TabIndex = 35;
+            this.labelAlpha.TabIndex = 14;
             this.labelAlpha.Text = "Alpha:";
             // 
             // labelBetta
@@ -431,7 +431,7 @@
             this.labelBetta.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelBetta.Name = "labelBetta";
             this.labelBetta.Size = new System.Drawing.Size(63, 25);
-            this.labelBetta.TabIndex = 36;
+            this.labelBetta.TabIndex = 15;
             this.labelBetta.Text = "Betta:";
             // 
             // textBoxA
@@ -441,7 +441,7 @@
             this.textBoxA.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxA.Name = "textBoxA";
             this.textBoxA.Size = new System.Drawing.Size(78, 30);
-            this.textBoxA.TabIndex = 37;
+            this.textBoxA.TabIndex = 1;
             // 
             // textBoxB
             // 
@@ -450,7 +450,7 @@
             this.textBoxB.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxB.Name = "textBoxB";
             this.textBoxB.Size = new System.Drawing.Size(78, 30);
-            this.textBoxB.TabIndex = 38;
+            this.textBoxB.TabIndex = 2;
             // 
             // textBoxC
             // 
@@ -459,7 +459,7 @@
             this.textBoxC.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxC.Name = "textBoxC";
             this.textBoxC.Size = new System.Drawing.Size(78, 30);
-            this.textBoxC.TabIndex = 39;
+            this.textBoxC.TabIndex = 3;
             // 
             // textBoxAlpha
             // 
@@ -468,7 +468,7 @@
             this.textBoxAlpha.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxAlpha.Name = "textBoxAlpha";
             this.textBoxAlpha.Size = new System.Drawing.Size(78, 30);
-            this.textBoxAlpha.TabIndex = 40;
+            this.textBoxAlpha.TabIndex = 4;
             // 
             // textBoxBeta
             // 
@@ -477,7 +477,7 @@
             this.textBoxBeta.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxBeta.Name = "textBoxBeta";
             this.textBoxBeta.Size = new System.Drawing.Size(78, 30);
-            this.textBoxBeta.TabIndex = 41;
+            this.textBoxBeta.TabIndex = 5;
             // 
             // labelHeading
             // 
@@ -500,7 +500,7 @@
             this.label1.Location = new System.Drawing.Point(175, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 25);
-            this.label1.TabIndex = 49;
+            this.label1.TabIndex = 16;
             this.label1.Text = "Å";
             // 
             // label2
@@ -510,7 +510,7 @@
             this.label2.Location = new System.Drawing.Point(175, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 25);
-            this.label2.TabIndex = 50;
+            this.label2.TabIndex = 17;
             this.label2.Text = "Å";
             // 
             // label3
@@ -520,7 +520,7 @@
             this.label3.Location = new System.Drawing.Point(175, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 25);
-            this.label3.TabIndex = 51;
+            this.label3.TabIndex = 18;
             this.label3.Text = "Å";
             // 
             // label4
@@ -530,7 +530,7 @@
             this.label4.Location = new System.Drawing.Point(317, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 25);
-            this.label4.TabIndex = 52;
+            this.label4.TabIndex = 10;
             this.label4.Text = "Å";
             // 
             // label5
@@ -540,7 +540,7 @@
             this.label5.Location = new System.Drawing.Point(317, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 25);
-            this.label5.TabIndex = 53;
+            this.label5.TabIndex = 11;
             this.label5.Text = "Å";
             // 
             // label6
@@ -550,7 +550,7 @@
             this.label6.Location = new System.Drawing.Point(317, 101);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 25);
-            this.label6.TabIndex = 54;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Å";
             // 
             // label7
@@ -560,7 +560,7 @@
             this.label7.Location = new System.Drawing.Point(375, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 25);
-            this.label7.TabIndex = 55;
+            this.label7.TabIndex = 17;
             this.label7.Text = "°";
             // 
             // label8
@@ -570,7 +570,7 @@
             this.label8.Location = new System.Drawing.Point(375, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 25);
-            this.label8.TabIndex = 56;
+            this.label8.TabIndex = 18;
             this.label8.Text = "°";
             // 
             // label9
@@ -580,7 +580,7 @@
             this.label9.Location = new System.Drawing.Point(375, 108);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(20, 25);
-            this.label9.TabIndex = 57;
+            this.label9.TabIndex = 19;
             this.label9.Text = "°";
             // 
             // label10
@@ -590,7 +590,7 @@
             this.label10.Location = new System.Drawing.Point(317, 135);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 25);
-            this.label10.TabIndex = 58;
+            this.label10.TabIndex = 13;
             this.label10.Text = "Å";
             // 
             // label11
@@ -600,7 +600,7 @@
             this.label11.Location = new System.Drawing.Point(317, 169);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(26, 25);
-            this.label11.TabIndex = 59;
+            this.label11.TabIndex = 14;
             this.label11.Text = "Å";
             // 
             // labelOuterDiameter
@@ -610,7 +610,7 @@
             this.labelOuterDiameter.Location = new System.Drawing.Point(6, 67);
             this.labelOuterDiameter.Name = "labelOuterDiameter";
             this.labelOuterDiameter.Size = new System.Drawing.Size(147, 25);
-            this.labelOuterDiameter.TabIndex = 60;
+            this.labelOuterDiameter.TabIndex = 16;
             this.labelOuterDiameter.Text = "Outer diameter:";
             // 
             // textBoxOuterDiameter
@@ -620,7 +620,7 @@
             this.textBoxOuterDiameter.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxOuterDiameter.Name = "textBoxOuterDiameter";
             this.textBoxOuterDiameter.Size = new System.Drawing.Size(98, 30);
-            this.textBoxOuterDiameter.TabIndex = 62;
+            this.textBoxOuterDiameter.TabIndex = 1;
             // 
             // textBoxInputFile
             // 
@@ -631,7 +631,7 @@
             this.textBoxInputFile.Name = "textBoxInputFile";
             this.textBoxInputFile.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxInputFile.Size = new System.Drawing.Size(332, 57);
-            this.textBoxInputFile.TabIndex = 64;
+            this.textBoxInputFile.TabIndex = 3;
             // 
             // label12
             // 
@@ -642,7 +642,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(237, 25);
-            this.label12.TabIndex = 65;
+            this.label12.TabIndex = 6;
             this.label12.Text = "Choose input parameters:";
             // 
             // buttonLoadCrystal
@@ -654,7 +654,7 @@
             this.buttonLoadCrystal.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonLoadCrystal.Name = "buttonLoadCrystal";
             this.buttonLoadCrystal.Size = new System.Drawing.Size(100, 32);
-            this.buttonLoadCrystal.TabIndex = 66;
+            this.buttonLoadCrystal.TabIndex = 0;
             this.buttonLoadCrystal.Text = "Load";
             this.buttonLoadCrystal.UseVisualStyleBackColor = false;
             this.buttonLoadCrystal.Click += new System.EventHandler(this.buttonLoadCrystal_Click);
@@ -668,7 +668,7 @@
             this.buttonSaveCrystalParams.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonSaveCrystalParams.Name = "buttonSaveCrystalParams";
             this.buttonSaveCrystalParams.Size = new System.Drawing.Size(100, 32);
-            this.buttonSaveCrystalParams.TabIndex = 67;
+            this.buttonSaveCrystalParams.TabIndex = 7;
             this.buttonSaveCrystalParams.Text = "Save";
             this.buttonSaveCrystalParams.UseVisualStyleBackColor = false;
             this.buttonSaveCrystalParams.Click += new System.EventHandler(this.buttonSaveCrystalParams_Click);
@@ -682,7 +682,7 @@
             this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(158, 17);
-            this.label13.TabIndex = 68;
+            this.label13.TabIndex = 6;
             this.label13.Text = "Choose axis to build on:";
             // 
             // radioButtonXUp
@@ -693,7 +693,7 @@
             this.radioButtonXUp.Location = new System.Drawing.Point(9, 20);
             this.radioButtonXUp.Name = "radioButtonXUp";
             this.radioButtonXUp.Size = new System.Drawing.Size(59, 21);
-            this.radioButtonXUp.TabIndex = 70;
+            this.radioButtonXUp.TabIndex = 1;
             this.radioButtonXUp.TabStop = true;
             this.radioButtonXUp.Text = "x up";
             this.radioButtonXUp.UseVisualStyleBackColor = true;
@@ -705,7 +705,7 @@
             this.radioButtonYUp.Location = new System.Drawing.Point(9, 47);
             this.radioButtonYUp.Name = "radioButtonYUp";
             this.radioButtonYUp.Size = new System.Drawing.Size(60, 21);
-            this.radioButtonYUp.TabIndex = 71;
+            this.radioButtonYUp.TabIndex = 5;
             this.radioButtonYUp.Text = "y up";
             this.radioButtonYUp.UseVisualStyleBackColor = true;
             // 
@@ -716,7 +716,7 @@
             this.radioButtonZUp.Location = new System.Drawing.Point(9, 74);
             this.radioButtonZUp.Name = "radioButtonZUp";
             this.radioButtonZUp.Size = new System.Drawing.Size(60, 21);
-            this.radioButtonZUp.TabIndex = 72;
+            this.radioButtonZUp.TabIndex = 9;
             this.radioButtonZUp.Text = "z up";
             this.radioButtonZUp.UseVisualStyleBackColor = true;
             // 
@@ -732,7 +732,7 @@
             this.radioButtonMult.Location = new System.Drawing.Point(15, 25);
             this.radioButtonMult.Name = "radioButtonMult";
             this.radioButtonMult.Size = new System.Drawing.Size(88, 21);
-            this.radioButtonMult.TabIndex = 75;
+            this.radioButtonMult.TabIndex = 1;
             this.radioButtonMult.Text = "Multiples";
             this.radioButtonMult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButtonMult.UseVisualStyleBackColor = true;
@@ -747,7 +747,7 @@
             this.radioButtonAngstroms.Location = new System.Drawing.Point(3, 3);
             this.radioButtonAngstroms.Name = "radioButtonAngstroms";
             this.radioButtonAngstroms.Size = new System.Drawing.Size(100, 21);
-            this.radioButtonAngstroms.TabIndex = 74;
+            this.radioButtonAngstroms.TabIndex = 0;
             this.radioButtonAngstroms.TabStop = true;
             this.radioButtonAngstroms.Text = "Angstroms";
             this.radioButtonAngstroms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -761,7 +761,7 @@
             this.panelUnits.Location = new System.Drawing.Point(11, 315);
             this.panelUnits.Name = "panelUnits";
             this.panelUnits.Size = new System.Drawing.Size(137, 49);
-            this.panelUnits.TabIndex = 77;
+            this.panelUnits.TabIndex = 6;
             // 
             // panelAxes
             // 
@@ -781,7 +781,7 @@
             this.panelAxes.Location = new System.Drawing.Point(11, 208);
             this.panelAxes.Name = "panelAxes";
             this.panelAxes.Size = new System.Drawing.Size(347, 104);
-            this.panelAxes.TabIndex = 78;
+            this.panelAxes.TabIndex = 5;
             // 
             // radioButtonZBack
             // 
@@ -790,7 +790,7 @@
             this.radioButtonZBack.Location = new System.Drawing.Point(254, 74);
             this.radioButtonZBack.Name = "radioButtonZBack";
             this.radioButtonZBack.Size = new System.Drawing.Size(74, 21);
-            this.radioButtonZBack.TabIndex = 97;
+            this.radioButtonZBack.TabIndex = 12;
             this.radioButtonZBack.TabStop = true;
             this.radioButtonZBack.Text = "z back";
             this.radioButtonZBack.UseVisualStyleBackColor = true;
@@ -802,7 +802,7 @@
             this.radioButtonZFront.Location = new System.Drawing.Point(163, 74);
             this.radioButtonZFront.Name = "radioButtonZFront";
             this.radioButtonZFront.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonZFront.TabIndex = 96;
+            this.radioButtonZFront.TabIndex = 11;
             this.radioButtonZFront.TabStop = true;
             this.radioButtonZFront.Text = "z front";
             this.radioButtonZFront.UseVisualStyleBackColor = true;
@@ -814,7 +814,7 @@
             this.radioButtonYBack.Location = new System.Drawing.Point(254, 47);
             this.radioButtonYBack.Name = "radioButtonYBack";
             this.radioButtonYBack.Size = new System.Drawing.Size(74, 21);
-            this.radioButtonYBack.TabIndex = 95;
+            this.radioButtonYBack.TabIndex = 8;
             this.radioButtonYBack.TabStop = true;
             this.radioButtonYBack.Text = "y back";
             this.radioButtonYBack.UseVisualStyleBackColor = true;
@@ -826,7 +826,7 @@
             this.radioButtonYFront.Location = new System.Drawing.Point(163, 47);
             this.radioButtonYFront.Name = "radioButtonYFront";
             this.radioButtonYFront.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonYFront.TabIndex = 94;
+            this.radioButtonYFront.TabIndex = 7;
             this.radioButtonYFront.TabStop = true;
             this.radioButtonYFront.Text = "y front";
             this.radioButtonYFront.UseVisualStyleBackColor = true;
@@ -838,7 +838,7 @@
             this.radioButtonXBack.Location = new System.Drawing.Point(254, 20);
             this.radioButtonXBack.Name = "radioButtonXBack";
             this.radioButtonXBack.Size = new System.Drawing.Size(73, 21);
-            this.radioButtonXBack.TabIndex = 93;
+            this.radioButtonXBack.TabIndex = 4;
             this.radioButtonXBack.TabStop = true;
             this.radioButtonXBack.Text = "x back";
             this.radioButtonXBack.UseVisualStyleBackColor = true;
@@ -850,7 +850,7 @@
             this.radioButtonXFront.Location = new System.Drawing.Point(164, 20);
             this.radioButtonXFront.Name = "radioButtonXFront";
             this.radioButtonXFront.Size = new System.Drawing.Size(72, 21);
-            this.radioButtonXFront.TabIndex = 92;
+            this.radioButtonXFront.TabIndex = 3;
             this.radioButtonXFront.TabStop = true;
             this.radioButtonXFront.Text = "x front";
             this.radioButtonXFront.UseVisualStyleBackColor = true;
@@ -862,7 +862,7 @@
             this.radioButtonZDown.Location = new System.Drawing.Point(78, 74);
             this.radioButtonZDown.Name = "radioButtonZDown";
             this.radioButtonZDown.Size = new System.Drawing.Size(77, 21);
-            this.radioButtonZDown.TabIndex = 75;
+            this.radioButtonZDown.TabIndex = 10;
             this.radioButtonZDown.Text = "z down";
             this.radioButtonZDown.UseVisualStyleBackColor = true;
             // 
@@ -873,7 +873,7 @@
             this.radioButtonYDown.Location = new System.Drawing.Point(78, 47);
             this.radioButtonYDown.Name = "radioButtonYDown";
             this.radioButtonYDown.Size = new System.Drawing.Size(77, 21);
-            this.radioButtonYDown.TabIndex = 74;
+            this.radioButtonYDown.TabIndex = 6;
             this.radioButtonYDown.Text = "y down";
             this.radioButtonYDown.UseVisualStyleBackColor = true;
             // 
@@ -884,7 +884,7 @@
             this.radioButtonXDown.Location = new System.Drawing.Point(78, 20);
             this.radioButtonXDown.Name = "radioButtonXDown";
             this.radioButtonXDown.Size = new System.Drawing.Size(76, 21);
-            this.radioButtonXDown.TabIndex = 73;
+            this.radioButtonXDown.TabIndex = 2;
             this.radioButtonXDown.Text = "x down";
             this.radioButtonXDown.UseVisualStyleBackColor = true;
             // 
@@ -917,7 +917,7 @@
             this.panelCrystal.MaximumSize = new System.Drawing.Size(1010, 382);
             this.panelCrystal.Name = "panelCrystal";
             this.panelCrystal.Size = new System.Drawing.Size(428, 191);
-            this.panelCrystal.TabIndex = 79;
+            this.panelCrystal.TabIndex = 2;
             // 
             // pictureBoxCrystal
             // 
@@ -947,7 +947,7 @@
             this.panelInput.MaximumSize = new System.Drawing.Size(1200, 300);
             this.panelInput.Name = "panelInput";
             this.panelInput.Size = new System.Drawing.Size(525, 180);
-            this.panelInput.TabIndex = 68;
+            this.panelInput.TabIndex = 1;
             // 
             // panelStructur
             // 
@@ -976,7 +976,7 @@
             this.panelStructur.Location = new System.Drawing.Point(31, 259);
             this.panelStructur.Name = "panelStructur";
             this.panelStructur.Size = new System.Drawing.Size(386, 379);
-            this.panelStructur.TabIndex = 81;
+            this.panelStructur.TabIndex = 4;
             // 
             // buttonSaveStructure
             // 
@@ -986,7 +986,7 @@
             this.buttonSaveStructure.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonSaveStructure.Name = "buttonSaveStructure";
             this.buttonSaveStructure.Size = new System.Drawing.Size(100, 32);
-            this.buttonSaveStructure.TabIndex = 79;
+            this.buttonSaveStructure.TabIndex = 8;
             this.buttonSaveStructure.Text = "Export";
             this.buttonSaveStructure.UseVisualStyleBackColor = false;
             this.buttonSaveStructure.Click += new System.EventHandler(this.buttonSaveStructure_Click);
@@ -1012,7 +1012,7 @@
             this.buttonReset.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(100, 32);
-            this.buttonReset.TabIndex = 79;
+            this.buttonReset.TabIndex = 5;
             this.buttonReset.Text = "Reset";
             this.buttonReset.UseVisualStyleBackColor = false;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
@@ -1027,7 +1027,7 @@
             this.checkBoxAxes.Location = new System.Drawing.Point(205, 7);
             this.checkBoxAxes.Name = "checkBoxAxes";
             this.checkBoxAxes.Size = new System.Drawing.Size(70, 24);
-            this.checkBoxAxes.TabIndex = 82;
+            this.checkBoxAxes.TabIndex = 2;
             this.checkBoxAxes.Text = "Axes";
             this.checkBoxAxes.UseVisualStyleBackColor = true;
             this.checkBoxAxes.CheckedChanged += new System.EventHandler(this.checkBoxAxes_CheckedChanged);
@@ -1042,7 +1042,7 @@
             this.checkBoxFullSize.Location = new System.Drawing.Point(363, 8);
             this.checkBoxFullSize.Name = "checkBoxFullSize";
             this.checkBoxFullSize.Size = new System.Drawing.Size(92, 24);
-            this.checkBoxFullSize.TabIndex = 83;
+            this.checkBoxFullSize.TabIndex = 4;
             this.checkBoxFullSize.Text = "Full size";
             this.checkBoxFullSize.UseVisualStyleBackColor = true;
             this.checkBoxFullSize.CheckedChanged += new System.EventHandler(this.checkBoxFullSize_CheckedChanged);
@@ -1053,7 +1053,7 @@
             this.trackBarPointSize.Location = new System.Drawing.Point(80, 3);
             this.trackBarPointSize.Name = "trackBarPointSize";
             this.trackBarPointSize.Size = new System.Drawing.Size(119, 69);
-            this.trackBarPointSize.TabIndex = 84;
+            this.trackBarPointSize.TabIndex = 1;
             this.trackBarPointSize.Scroll += new System.EventHandler(this.trackBarPointSize_Scroll);
             // 
             // labelPointSize
@@ -1065,7 +1065,7 @@
             this.labelPointSize.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelPointSize.Name = "labelPointSize";
             this.labelPointSize.Size = new System.Drawing.Size(81, 20);
-            this.labelPointSize.TabIndex = 66;
+            this.labelPointSize.TabIndex = 0;
             this.labelPointSize.Text = "Point size:";
             // 
             // checkBoxOrigin
@@ -1080,7 +1080,7 @@
             this.checkBoxOrigin.Location = new System.Drawing.Point(281, 7);
             this.checkBoxOrigin.Name = "checkBoxOrigin";
             this.checkBoxOrigin.Size = new System.Drawing.Size(76, 24);
-            this.checkBoxOrigin.TabIndex = 85;
+            this.checkBoxOrigin.TabIndex = 3;
             this.checkBoxOrigin.Text = "Origin";
             this.checkBoxOrigin.UseVisualStyleBackColor = true;
             this.checkBoxOrigin.CheckedChanged += new System.EventHandler(this.checkBoxOrigin_CheckedChanged);
@@ -1099,7 +1099,7 @@
             this.panelControlTools.Location = new System.Drawing.Point(454, 620);
             this.panelControlTools.Name = "panelControlTools";
             this.panelControlTools.Size = new System.Drawing.Size(600, 76);
-            this.panelControlTools.TabIndex = 86;
+            this.panelControlTools.TabIndex = 7;
             // 
             // textBoxInfo
             // 
@@ -1109,7 +1109,7 @@
             this.textBoxInfo.Location = new System.Drawing.Point(0, 36);
             this.textBoxInfo.Name = "textBoxInfo";
             this.textBoxInfo.Size = new System.Drawing.Size(600, 41);
-            this.textBoxInfo.TabIndex = 86;
+            this.textBoxInfo.TabIndex = 6;
             this.textBoxInfo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxInfo_KeyDown);
             this.textBoxInfo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxInfo_KeyPress);
             // 
@@ -1121,7 +1121,7 @@
             this.checkBoxViewMode.Location = new System.Drawing.Point(20, 663);
             this.checkBoxViewMode.Name = "checkBoxViewMode";
             this.checkBoxViewMode.Size = new System.Drawing.Size(113, 24);
-            this.checkBoxViewMode.TabIndex = 90;
+            this.checkBoxViewMode.TabIndex = 8;
             this.checkBoxViewMode.Text = "View mode";
             this.checkBoxViewMode.UseVisualStyleBackColor = true;
             this.checkBoxViewMode.CheckedChanged += new System.EventHandler(this.checkBoxViewMode_CheckedChanged);
@@ -1136,7 +1136,7 @@
             this.buttonLoadView.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.buttonLoadView.Name = "buttonLoadView";
             this.buttonLoadView.Size = new System.Drawing.Size(100, 32);
-            this.buttonLoadView.TabIndex = 91;
+            this.buttonLoadView.TabIndex = 6;
             this.buttonLoadView.Text = "Load";
             this.buttonLoadView.UseVisualStyleBackColor = false;
             this.buttonLoadView.Click += new System.EventHandler(this.buttonLoadView_Click);
