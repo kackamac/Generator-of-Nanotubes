@@ -1,5 +1,5 @@
-WindowsFormsApplication2/bin/*
-WindowsFormsApplication2/obj/*
+GeneratorOfNanotubes/bin/*
+GeneratorOfNanotubes/obj/*
 packages/*
-WindowsFormsApplication2/Properties/DataSources/*
+GeneratorOfNanotubes/Properties/DataSources/*
 .vs/*

@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2D1CEEC-5561-436B-A7B4-D705D295287C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication2</RootNamespace>
+    <AssemblyName>WindowsFormsApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenGL.Net.WinForms, Version=0.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenGL.Net.WinForms.0.7.1\lib\net461\OpenGL.Net.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreatorWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatorWindow.Designer.cs">
+      <DependentUpon>CreatorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentsHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenGLMethods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreatorWindow.resx">
+      <DependentUpon>CreatorWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioCapture.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioContext+MaxAuxiliarySends.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioContext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioContextException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioDeviceException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.AudioValueException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.AL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.Alc.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.EffectsExtension+EaxReverb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.EffectsExtension+EfxEaxReverb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.EffectsExtension+ReverbPresets.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.EffectsExtension.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.XRamExtension+XRamStorage.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Audio.OpenAL.XRamExtension.datasource" />
+    <None Include="Properties\DataSources\OpenTK.AutoGeneratedAttribute.datasource" />
+    <None Include="Properties\DataSources\OpenTK.BezierCurve.datasource" />
+    <None Include="Properties\DataSources\OpenTK.BezierCurveCubic.datasource" />
+    <None Include="Properties\DataSources\OpenTK.BezierCurveQuadric.datasource" />
+    <None Include="Properties\DataSources\OpenTK.BindingsBase.datasource" />
+    <None Include="Properties\DataSources\OpenTK.BlittableValueType.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Box2.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Box2d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Configuration.datasource" />
+    <None Include="Properties\DataSources\OpenTK.ContextExistsException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.ContextHandle.datasource" />
+    <None Include="Properties\DataSources\OpenTK.DisplayDevice.datasource" />
+    <None Include="Properties\DataSources\OpenTK.DisplayResolution.datasource" />
+    <None Include="Properties\DataSources\OpenTK.FrameEventArgs.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Functions.datasource" />
+    <None Include="Properties\DataSources\OpenTK.GameWindow.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.Color4.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ColorFormat.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES10.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+Apple.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+Ext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+Img.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+NV.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+Oes.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL+Qcom.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES11.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.DebugProc.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.DebugProcKhr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Amd.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Angle.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Apple.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Ext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Img.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Intel.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Khr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+NV.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Oes.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL+Qcom.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES20.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.DebugProc.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.DebugProcKhr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Amd.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Angle.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Apple.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Ext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Img.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Intel.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Khr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+NV.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Oes.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL+Qcom.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.ES30.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsBindingsBase.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContext+GetAddressDelegate.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContext+GetCurrentContextDelegate.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContextException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContextMissingException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsContextVersion.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsErrorException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsMode.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.GraphicsModeException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.IGraphicsContext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.IGraphicsContextInternal.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.DebugProc.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.DebugProcAmd.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.DebugProcArb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.DebugProcKhr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Amd.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Apple.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Arb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Ati.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Ext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+GL_3dfx.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Gremedy.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+HP.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Ibm.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Ingr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Intel.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Khr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Mesa.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+NV.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Nvx.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Oes.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Pgi.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Sgi.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Sgis.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Sgix.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Sun.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL+Sunx.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.DebugProc.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.DebugProcArb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.DebugProcKhr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.GL+Arb.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.GL+Ext.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.GL+Khr.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Graphics.OpenGL4.GL.datasource" />
+    <None Include="Properties\DataSources\OpenTK.GraphicsException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Half.datasource" />
+    <None Include="Properties\DataSources\OpenTK.INativeWindow.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePad.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadButtons.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadCapabilities.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadDPad.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadState.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadThumbSticks.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.GamePadTriggers.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.IInputDevice.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.IInputDriver.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.IJoystickDriver.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.IKeyboardDriver.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.IMouseDriver.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.Joystick.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickAxisCollection.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickButtonCollection.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickButtonEventArgs.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickCapabilities.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickDevice.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickEventArgs.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickHatState.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickMoveEventArgs.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Input.JoystickState.datasource" />
+    <None Include="Properties\DataSources\OpenTK.KeyPressEventArgs.datasource" />
+    <None Include="Properties\DataSources\OpenTK.MathHelper.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2x3.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2x3d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2x4.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix2x4d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3x2.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3x2d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3x4.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix3x4d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4x2.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4x2d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4x3.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Matrix4x3d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.MouseCursor.datasource" />
+    <None Include="Properties\DataSources\OpenTK.NativeWindow.datasource" />
+    <None Include="Properties\DataSources\OpenTK.PlatformException.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Quaternion.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Quaterniond.datasource" />
+    <None Include="Properties\DataSources\OpenTK.SlotAttribute.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Toolkit.datasource" />
+    <None Include="Properties\DataSources\OpenTK.ToolkitOptions.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector2.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector2d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector2h.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector3.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector3d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector3h.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector4.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector4d.datasource" />
+    <None Include="Properties\DataSources\OpenTK.Vector4h.datasource" />
+    <None Include="Properties\DataSources\OpenTK.WindowIcon.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pipe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiral2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plane.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
