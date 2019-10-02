@@ -1046,8 +1046,8 @@ namespace WindowsFormsApplication2
             Queue<CartesianCoordinates> queueCrystal = new Queue<CartesianCoordinates>();
 
             double sizeX = CreatorOfSurface.crystalMoveX.x;
-            double sizeY = (sMax.y - sMin.y);
-            double dist =  sizeY / 2; //height / 2; //
+            //double sizeY = (sMax.y - sMin.y);
+            double dist =  height / 2; //sizeY / 2; //
             double moveX = (0 - sMin.x); //move minimum to x=0  
             double moveY = (0 - sMin.y); //move minimum to y=0  
             double moveZ = (0 - sMin.z); //move minimum to z=0  
@@ -1065,7 +1065,7 @@ namespace WindowsFormsApplication2
             CreatedStructure.Instance.Clear();
 
 
-            
+
             double origFi = 0;
             double origR = origFi * climb + move;
             double linStep = sizeX / 1000;
@@ -1390,6 +1390,7 @@ namespace WindowsFormsApplication2
                 CreatedStructure.Instance.Add(cc);
             }
         }
+
         public static void CreateSurfaceDepthZ(double depthZ, double wallDepth)
         {
             double repeats = depthZ; //repeats are read from the params           
@@ -1492,6 +1493,31 @@ namespace WindowsFormsApplication2
             {
                 repeats = (int)Math.Round(sp.circumference / recountedCp.a);
             } 
+            CreatorOfSpiral.CreateSpiral(sp.move, sp.climb, sp.circumference, recountedCp.b, repeats);
+
+        }
+
+		/// <summary>
+        /// Function that reads input file, set parametres, creates plane and then recounts spiral structure coordinates from the plane
+        /// </summary>
+        /// <param name="cp">parameters of the crystal</param>
+        /// <param name="sp">parameters of the spiral</param>
+        /// <param name="inputFile">name of input file with one cell's atoms</param>	
+        /// <param name="axis">axis and direction to build structure around</param>
+        public static void CreateSpiralFromPlane(CrystalParameters cp, SpiralParameters sp, string inputFile, string axis)
+        {
+            CreatedStructure.Instance.Clear();
+            LoaderAndSaver.LoadFile(inputFile);
+            CrystalParameters recountedCp = RotatorOfCrystal.RotateCrystalRoundAxis(axis, cp);
+            CreatorOfSurface.SetCrystalParams(recountedCp, axis);
+            CreatorOfSurface.CreateSurface(recountedCp, sp.circumference, sp.wallWidth, sp.depth, axis);
+            int repeats = 1; //count how many times the basic cell should repeat in the structure
+            if (!CreatorOfSurface.angstroms) //repeats must be counted from the length
+            {
+                sp.circumference = sp.circumference * recountedCp.a;
+            }
+            
+                     
             CreatorOfSpiral.CreateSpiral(sp.move, sp.climb, sp.circumference, recountedCp.b, repeats);
 
         }

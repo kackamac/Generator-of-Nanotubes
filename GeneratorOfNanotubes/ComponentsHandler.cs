@@ -205,6 +205,7 @@ namespace WindowsFormsApplication2
             {
                 return Axes.zUp.ToString();
             }
+            }
             else if (radioButtonZDown.Checked)
             {
                 return Axes.zDown.ToString();
@@ -292,7 +293,8 @@ namespace WindowsFormsApplication2
             }
             try
             {
-                Program.CreateSpiral(crystParams, spiralParams, inputFile, axis);
+                //Program.CreateSpiral(crystParams, spiralParams, inputFile, axis); //TODO:nejak tam nesedi navazovani automu
+                Program.CreateSpiralFromPlane(crystParams, spiralParams, inputFile, axis);
                 ActionWasSuccessfull("Spiral was created.");
             }
             catch
