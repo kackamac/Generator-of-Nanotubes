@@ -205,7 +205,6 @@ namespace WindowsFormsApplication2
             {
                 return Axes.zUp.ToString();
             }
-            }
             else if (radioButtonZDown.Checked)
             {
                 return Axes.zDown.ToString();

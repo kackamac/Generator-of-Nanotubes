@@ -1,5 +1,5 @@
 GeneratorOfNanotubes/bin/*
 GeneratorOfNanotubes/obj/*
-packages/*
 GeneratorOfNanotubes/Properties/DataSources/*
-.vs/*
+GeneratorOfNanotubes/.vs/*
+GeneratorOfNanotubes/packages/*
